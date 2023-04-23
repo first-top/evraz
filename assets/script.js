@@ -48,12 +48,33 @@ const pictureDecor = {
     }
     return false
   },
+
+  setPictureDecor(node) {
+    const picture = node.closest(".p-r").querySelector("img")
+    const classes = node.classList
+    const rect = picture.getBoundingClientRect()
+    console.log(classes)
+    const position = {}
+    if (node.classList.contains("r")) {
+      node.style.left =`${rect.width}px`
+    }
+    if (node.classList.contains("l")) {
+      node.style.right =`${rect.width}px`
+    }
+  },
+
+
   init() {
     const items = document.querySelectorAll(".item")
+    const topPicturesDecor = document.querySelectorAll(".img-decor")
     items.forEach(item => {
       const pictureTop = item.querySelector(".item-picture_top")
       const pictureBottom = item.querySelector(".item-picture_bottom")
       if (pictureTop && pictureBottom) this.setDecor(pictureTop, pictureBottom)
+    })
+
+    topPicturesDecor.forEach(elem => {
+      this.setPictureDecor(elem)
     })
   }
 }

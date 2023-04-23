@@ -2,14 +2,14 @@
 <project version="4">
   <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
-      <paths name="first-top">
+      <paths name="myHost">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="kunchurpni.ru">
+      <paths name="pchela">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
